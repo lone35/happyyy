@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      background-color: #fff0f5;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #e91e63;
+      font-size: 2.5em;
+    }
+
+    .photo {
+      width: 250px;
+      border-radius: 15px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .message {
+      font-size: 1.3em;
+      margin: 30px;
+      color: #333;
+    }
+
+    #btn {
+      font-size: 1.2em;
+      padding: 15px 30px;
+      background-color: #ff4081;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    #btn:hover {
+      background-color: #e91e63;
+    }
+
+    .candles {
+      font-size: 4em;
+      margin: 30px 0;
+      color: orange;
+      transition: opacity 1s ease;
+    }
+
+    .hidden {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mumları üflemeye ne dersin Kader olaraktan :)</h1>
+
+  <div class="candles" id="candles">🕯️🕯️🕯️🕯️🕯️</div>
+
+  <img src="senem.jpg" alt="Senem" class="photo" />
+
+  <div class="message">
+    Ömür dediğin bu yolculukta pek çok insan tanırsın.<br />
+    Fakat Kardeş dediğin bir elin parmaklarını geçmez.<br />
+    Her zaman aynı eldeki parmaklar olarak kalmak dileğiyle,<br />
+    <strong>Nice Mutlu yıllara ozimm…</strong>
+  </div>
+
+  <button id="btn" onclick="blowCandles()">Mumları Üfle!</button>
+
+  <audio id="bgMusic" src="music.mp3"></audio>
+
+  <script>
+    function blowCandles() {
+      document.getElementById('candles').classList.add('hidden');
+      document.getElementById('bgMusic').play();
+      document.getElementById('btn').innerText = "Dileğini Tut 🎉";
+    }
+  </script>
+</body>
+</html>
